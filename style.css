@@ -16,8 +16,8 @@ div.centre
 
 div.titulo{
   font-weight: bold;
-  font-size:22px;
-  font-family: Arial, serif;
+  font-size:25px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   text-align: center;
   color: black;  display: block;
   margin-left: auto;
@@ -35,7 +35,7 @@ div.texto{
 }
 
 div.footer{
-  font-size:10px;
+  font-size:12px;
   text-align: center;
   font-family: Arial, serif;
   color: black;  display: block;

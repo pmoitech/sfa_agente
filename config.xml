@@ -4,7 +4,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id = "com.workforce.agent"
-        version = "1.0.0">
+        version = "1.0.1">
 
     <name>WorkForce Solutions</name>
 
@@ -12,7 +12,7 @@
        WorkForce Solutions - Solución para toda su fuerza de trabajo. by Geocommerce Cia. Ltda. Quito, Ecuador - 2015
     </description>
 
-    <author href="http://www.facil.com.co" email="dramirez@facil.com.co">
+    <author href="http://www.geocommerce.com.ec">
         by Geocommerce Cia. Ltda. Quito, Ecuador - 2015
     </author>
 
