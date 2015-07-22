@@ -1,91 +1,45 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="./src/online.js"></script>
+        <title>WorkForce Solutions</title>
+    </head>
+    <body style="font-family: Arial">
 
-    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=9">
- 
-    <script src="jquery-1.10.2.min.js"></script>
-    <!--script src="jquery.mobile-1.3.2.min.js"></script-->
-    <script src="phonegap-1.0.0.js"></script>
-  
-    <link rel="stylesheet" href="jquery.mobile-1.3.2.min.css" />
+            <h1 id="online_title">Checking online presence</h1>
 
 
-<head>
-	<title>WorkForce Solutions</title>
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-</head>
+        <div class="layout">
+        <div class="titulo">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        GeoCommerce
+      </div>
 
-<body>
-<br>
-<div class="layout">
-<div class="titulo">
-WorkForce Solutions
-</div>
-Soporte y control a procesos de campo
-<!--hr-->
-<br><br><br>
 
-<script language="JavaScript">
+        <script>
+            var greenLight = document.getElementById('green_light');
+            var redLight = document.getElementById('red_light');
 
-$(document).ready(function(e) {
-  window.location.assign("http://workforce.buskoo.com/agent/");
-   });
+            window.onLineHandler = function(){
+                //greenLight.style.opacity = 1;
+                //redLight.style.opacity = 0;
+                //document.getElementById('online_title').innerHTML = 'YOU ARE ONLINE';
+                window.location.assign("http://workforce.buskoo.com/agent/");
 
-  function connect(lan) {
-    $.mobile.loading("show");
-    $.ajax({
-      type: 'GET',
-      url: "http://workforce.buskoo.com/assets/connect/connect.php",
-      contentType: "application/json",
-      dataType: 'json',
-      jsonp : "callback",
-      jsonpCallback: 'jsonpCallback',
-      data : {cachehora : (new Date()).getTime()},
-      }).done(function(response){
-        if(response.state === 'ok'){
-          $.mobile.loading("hide");
-          window.location.assign("http://workforce.buskoo.com/agent/");
-        }else{
-          $.mobile.loading("hide");
-          alert('No dispone de conexion a internet o el servidor no responde, verifique su conexión y vuelva a intentarlo.');
-        }
-     }).fail(function(jqXHR, textStatus, errorThrown){
-          $.mobile.loading("hide");
-          alert('No dispone de conexion a internet o el servidor no responde, verifique su conexión y vuelva a intentarlo.');
+            };
+            window.offLineHandler = function(){
+                //greenLight.style.opacity = 0;
+                //redLight.style.opacity = 1;
+                document.getElementById('online_title').innerHTML = 'No estÃ¡s conectado a internet';
+            };
+        </script>
 
-      }); 
-    
-  }
-
- 
-  
-</script>
-
-<div class="layout">
-<div class="centre"></div>
-  <div class="centre"><a href="http://workforce.buskoo.com/agent"><img src="logo_2015.png" /></a></div>
-</div>
-<br><br>
-
-<div class="layout">
-  <div class="centre">
-<a href="http://workforce.buskoo.com/agent"><img src="loading_icon.gif" /></a>  </div>
-</div>
-<br><br>
-<footer>
-	<div class="footer">
-        by Geocommerce Cia. Ltda. Quito, Ecuador - 2014
+        </div>
+        <footer>
+      <div class="footer">
+        www.geocommerce.com.ec
     </div>
 </footer>
-
-</body>
-
-
-
-
+    </body>
 </html>
